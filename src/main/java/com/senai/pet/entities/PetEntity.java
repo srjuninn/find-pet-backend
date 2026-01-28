@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="tb_pet")
+@Table(name = "tb_pet")
 @Setter
 @Getter
 @AllArgsConstructor
@@ -23,5 +23,13 @@ public class PetEntity {
     private String raca;
     private Porte porte;
     private Tipo tipo;
+
+    public PetEntity(String nome, int idade, String raca, Porte porte, Tipo tipo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.raca = raca;
+        this.porte = porte;
+        this.tipo = tipo;
+    }
 }
 
